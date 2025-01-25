@@ -3,7 +3,9 @@ import React from 'react'
 import Spinner from './Spinner'
 import CountryItem from './CountryItem'
 import Message from './Message'
-function CountryList({cities,isLoading}) {
+import { useCities } from '../src/Contexts/CitiesContext'
+function CountryList() {
+    const {cities,isLoading} = useCities();
     if(isLoading) return <Spinner />
     if(!cities) return <Message message='Add your first Country by clicking on the map' />
     const countries = cities.reduce((arr,city) =>{
