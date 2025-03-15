@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter,Navigate,Route,Routes} from "react-router-dom";
 import Product from "./pages/Product.jsx";
-import HomePage from "./pages/HomePage";
-import Pricing from "./pages/Pricing";
+import Homepage from "./pages/HomePage.jsx";
+import Pricing from "./pages/Pricing.jsx";
 import AppLayout from "./pages/AppLayout.jsx";
 import Login from "./pages/Login.jsx";
 import CityList from "../components/CityList.jsx";
@@ -20,7 +20,7 @@ function App() {
       <CitiesProvider>
         <BrowserRouter>
           <Routes>
-              <Route index element={<HomePage />} />
+              <Route index element={<Homepage />} />
               <Route path="product" element={<Product />} />
               <Route path="pricing" element={<Pricing />} />
               <Route path="login" element={<Login />} />
